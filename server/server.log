@@ -1,0 +1,160 @@
+nohup: ignoring input
+[2024-10-21T23:41:10.481Z] Server running on port 3000
+[2024-10-21T23:41:18.467Z] cookie status requested
+[2024-10-21T23:41:18.469Z] game state requested
+[2024-10-21T23:43:12.588Z] game state requested
+[2024-10-21T23:43:12.612Z] cookie status requested
+[2024-10-21T23:43:19.848Z] game state requested
+[2024-10-21T23:43:19.961Z] Attempting to update LinkedIn bio
+[2024-10-21T23:43:19.961Z] Updating set to true
+[2024-10-21T23:43:39.862Z] successfully updated bio
+[2024-10-21T23:43:39.966Z] Storing game state: {"moves":["e4","a6","Na3","a5","Rb1","f5","g3","a4","Ra1"],"turn":false}
+[2024-10-21T23:43:39.967Z] updated game state moves: e4,a6,Na3,a5,Rb1,f5,g3,a4,Ra1 turn: false
+[2024-10-21T23:43:52.946Z] cookie status requested
+[2024-10-21T23:43:53.305Z] game state requested
+[2024-10-21T23:44:00.907Z] game state requested
+[2024-10-21T23:44:01.322Z] Attempting to update LinkedIn bio
+[2024-10-21T23:44:01.322Z] Updating set to true
+[2024-10-21T23:44:06.283Z] game state requested
+[2024-10-21T23:44:06.411Z] updating already in progress...
+[2024-10-21T23:44:06.411Z] Storing game state: {"moves":["e4","a6","Na3","a5","Rb1","f5","g3","a4","Ra1","f4"],"turn":false}
+[2024-10-21T23:44:06.435Z] updated game state moves: e4,a6,Na3,a5,Rb1,f5,g3,a4,Ra1,f4 turn: false
+[2024-10-21T23:44:17.503Z] successfully updated bio
+[2024-10-21T23:44:17.584Z] Storing game state: {"moves":["e4","a6","Na3","a5","Rb1","f5","g3","a4","Ra1","fxe4"],"turn":false}
+[2024-10-21T23:44:17.585Z] updated game state moves: e4,a6,Na3,a5,Rb1,f5,g3,a4,Ra1,fxe4 turn: false
+[2024-10-21T23:44:35.367Z] cookie status requested
+[2024-10-21T23:44:35.829Z] game state requested
+[2024-10-21T23:46:19.218Z] cookie status requested
+[2024-10-21T23:46:19.230Z] game state requested
+[2024-10-22T00:20:49.392Z] home page visited
+[2024-10-22T05:28:03.204Z] home page visited
+[2024-10-22T09:50:08.105Z] home page visited
+[2024-10-22T09:54:34.188Z] home page visited
+[2024-10-22T16:33:01.164Z] home page visited
+[2024-10-23T02:03:38.158Z] cookie status requested
+[2024-10-23T02:03:38.250Z] game state requested
+[2024-10-23T05:15:15.160Z] home page visited
+[2024-10-23T05:54:09.113Z] home page visited
+[2024-10-23T13:11:57.093Z] home page visited
+[2024-10-23T19:09:09.253Z] home page visited
+[2024-10-23T21:28:59.382Z] game state requested
+[2024-10-23T21:28:59.541Z] cookie status requested
+[2024-10-24T03:08:52.469Z] cookie status requested
+[2024-10-24T03:08:52.493Z] game state requested
+[2024-10-24T20:13:45.022Z] home page visited
+[2024-10-24T21:24:49.723Z] home page visited
+[2024-10-24T21:28:51.807Z] game state requested
+[2024-10-24T21:28:51.838Z] cookie status requested
+[2024-10-25T01:39:09.258Z] game state requested
+[2024-10-25T01:39:09.277Z] cookie status requested
+[2024-10-25T02:41:59.041Z] game state requested
+[2024-10-25T02:41:59.074Z] cookie status requested
+[2024-10-25T02:42:38.282Z] game state requested
+[2024-10-25T02:42:38.295Z] cookie status requested
+[2024-10-25T05:31:33.451Z] cookie status requested
+[2024-10-25T05:31:33.517Z] game state requested
+[2024-10-25T07:15:42.817Z] home page visited
+[2024-10-25T21:08:02.595Z] home page visited
+[2024-10-26T01:08:11.789Z] cookie status requested
+[2024-10-26T01:08:11.880Z] game state requested
+[2024-10-26T01:36:57.886Z] cookie status requested
+[2024-10-26T01:36:57.906Z] game state requested
+[2024-10-26T01:59:54.225Z] home page visited
+[2024-10-26T08:45:07.738Z] home page visited
+[2024-10-26T10:43:26.801Z] home page visited
+[2024-10-26T11:17:53.950Z] home page visited
+[2024-10-26T23:13:07.043Z] cookie status requested
+[2024-10-26T23:13:07.055Z] game state requested
+[2024-10-27T01:42:16.428Z] game state requested
+[2024-10-27T01:42:16.576Z] cookie status requested
+[2024-10-27T05:13:14.697Z] home page visited
+[2024-10-27T08:07:24.663Z] home page visited
+[2024-10-27T19:33:08.149Z] home page visited
+[2024-10-27T21:30:41.714Z] home page visited
+[2024-10-28T02:11:12.894Z] game state requested
+[2024-10-28T02:11:12.915Z] cookie status requested
+[2024-10-28T04:48:13.207Z] home page visited
+[2024-10-28T06:13:43.409Z] home page visited
+[2024-10-28T12:01:46.510Z] home page visited
+[2024-10-29T01:00:00.453Z] home page visited
+[2024-10-29T02:11:52.293Z] cookie status requested
+[2024-10-29T02:11:52.348Z] game state requested
+[2024-10-29T11:58:50.897Z] home page visited
+[2024-10-29T19:19:50.066Z] home page visited
+[2024-10-29T20:06:23.871Z] home page visited
+[2024-10-29T20:57:05.402Z] home page visited
+[2024-10-30T02:01:16.077Z] game state requested
+[2024-10-30T02:01:16.105Z] cookie status requested
+[2024-10-30T02:41:27.274Z] home page visited
+[2024-10-30T04:17:06.578Z] home page visited
+[2024-10-30T05:29:41.215Z] game state requested
+[2024-10-30T05:29:41.239Z] cookie status requested
+[2024-10-30T11:16:27.819Z] home page visited
+[2024-10-30T19:02:15.474Z] cookie status requested
+[2024-10-30T19:02:15.567Z] game state requested
+[2024-10-30T19:02:25.327Z] cookie status requested
+[2024-10-30T19:02:25.348Z] game state requested
+[2024-10-31T01:30:15.804Z] cookie status requested
+[2024-10-31T01:30:15.945Z] game state requested
+[2024-10-31T07:49:24.233Z] home page visited
+[2024-10-31T07:58:12.232Z] home page visited
+[2024-10-31T11:47:32.400Z] home page visited
+[2024-10-31T12:22:08.360Z] home page visited
+[2024-10-31T21:10:14.064Z] home page visited
+[2024-11-01T02:04:13.975Z] game state requested
+[2024-11-01T02:04:14.109Z] cookie status requested
+[2024-11-01T04:53:29.413Z] home page visited
+[2024-11-01T15:37:55.885Z] home page visited
+[2024-11-01T17:59:20.476Z] home page visited
+[2024-11-01T18:14:17.075Z] home page visited
+[2024-11-01T19:08:25.322Z] home page visited
+[2024-11-02T02:08:33.562Z] cookie status requested
+[2024-11-02T02:08:33.624Z] game state requested
+[2024-11-02T04:30:16.977Z] home page visited
+[2024-11-02T08:46:30.779Z] home page visited
+[2024-11-02T16:48:02.376Z] home page visited
+[2024-11-02T19:48:40.504Z] home page visited
+[2024-11-03T01:38:18.807Z] game state requested
+[2024-11-03T01:38:18.835Z] cookie status requested
+[2024-11-03T01:57:26.486Z] home page visited
+[2024-11-03T23:09:11.920Z] home page visited
+[2024-11-04T01:27:52.416Z] home page visited
+[2024-11-04T01:34:40.696Z] game state requested
+[2024-11-04T01:34:40.706Z] cookie status requested
+[2024-11-04T05:57:50.500Z] home page visited
+[2024-11-04T08:05:13.647Z] home page visited
+[2024-11-04T19:25:52.917Z] home page visited
+[2024-11-05T01:39:48.323Z] cookie status requested
+[2024-11-05T01:39:48.345Z] game state requested
+[2024-11-05T03:49:54.442Z] home page visited
+[2024-11-05T10:21:57.275Z] home page visited
+[2024-11-05T10:46:48.742Z] home page visited
+[2024-11-05T11:11:16.291Z] home page visited
+[2024-11-05T14:01:28.744Z] home page visited
+[2024-11-05T22:12:57.933Z] cookie status requested
+[2024-11-05T22:12:57.955Z] game state requested
+[2024-11-05T22:13:33.735Z] Attempting to update LinkedIn bio
+[2024-11-05T22:13:33.735Z] Updating set to true
+[2024-11-05T22:13:34.475Z] game state requested
+[2024-11-05T22:13:54.255Z] successfully updated bio
+[2024-11-05T22:13:54.367Z] Storing game state: {"moves":["e4","a6","Na3","a5","Rb1","f5","g3","a4","Ra1","fxe4","Rb1"],"turn":false}
+[2024-11-05T22:13:54.369Z] updated game state moves: e4,a6,Na3,a5,Rb1,f5,g3,a4,Ra1,fxe4,Rb1 turn: false
+[2024-11-06T01:55:26.831Z] game state requested
+[2024-11-06T01:55:26.845Z] cookie status requested
+[2024-11-06T02:43:17.459Z] home page visited
+[2024-11-06T10:53:27.048Z] home page visited
+[2024-11-06T20:54:55.850Z] home page visited
+[2024-11-06T22:08:39.610Z] home page visited
+[2024-11-06T22:55:22.715Z] home page visited
+[2024-11-07T01:49:20.756Z] cookie status requested
+[2024-11-07T01:49:20.765Z] game state requested
+[2024-11-07T04:17:11.761Z] home page visited
+[2024-11-07T04:29:57.533Z] home page visited
+[2024-11-07T06:46:04.882Z] home page visited
+[2024-11-08T01:38:56.031Z] game state requested
+[2024-11-08T01:38:56.155Z] cookie status requested
+[2024-11-08T02:25:54.895Z] home page visited
+[2024-11-08T04:40:45.158Z] home page visited
+[2024-11-08T09:23:14.083Z] home page visited
+[2024-11-08T11:28:03.512Z] home page visited
+[2024-11-08T14:50:15.505Z] home page visited

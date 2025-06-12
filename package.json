@@ -1,0 +1,24 @@
+{
+  "name": "linkedin",
+  "version": "1.0.0",
+  "main": "bot.js",
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.45.1",
+    "@types/node": "^20.14.10"
+  },
+  "dependencies": {
+    "@sparticuz/chromium": "^123.0.1",
+    "@vercel/kv": "^2.0.0",
+    "axios": "^1.7.2",
+    "chess": "^1.2.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "playwright-aws-lambda": "^0.10.0",
+    "playwright-core": "^1.45.1"
+  }
+}

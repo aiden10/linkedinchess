@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <link rel="icon" type="image/x-icon" href="/icon.png">
+    <link rel="stylesheet" href="styles.css">
+    <title>Chess</title>
+</head>
+<body>
+    <script>
+        async function submitMove(event) {
+            event.preventDefault();
+            const moveInput = document.getElementById("moveInput").value;
+            document.getElementById("moveInput").value = "";
+            console.log("Submitting move:", moveInput);
+
+            // Check if the move is in validMoves
+            const movesList = document.getElementById('movesList');
+            const validMoves = Array.from(movesList.children).map(li => li.textContent);
+            const responseDiv = document.getElementById("response");
+            responseDiv.style.display = 'block';
+
+            if (validMoves.includes(moveInput)) {
+                responseDiv.innerText = "Submitted move";
+                console.log("Move submitted");
+                getMoves(); // Refresh the move lists
+                
+                // https://linkedinchess.vercel.app/api/moves
+                // http://localhost:3000/api/moves
+                const res = await fetch("https://linkedinchess.vercel.app/api/moves", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        move: moveInput
+                    })
+                });
+                const result = await res.json();
+            } 
+            else {
+                responseDiv.innerText = "Invalid Move";
+                console.log("Invalid move attempted");
+            }
+            return false;
+        }
+        async function getMoves(){
+            // https://linkedinchess.vercel.app/api/moves
+            // http://localhost:3000/api/moves
+            const res = await fetch("https://linkedinchess.vercel.app/api/moves", {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            });
+            const result = await res.json();
+            updateMoveLists(result.moves, result.played);
+            console.log("Updated move lists");
+            console.log(result.moves);
+            console.log(result.played);
+        }
+        async function getCookieStatus(){
+            const res = await fetch("https://linkedinchess.vercel.app/api/status", {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            });
+            const result = await res.json();
+            updateCookieStatus(result.status);
+        }
+
+        function updateCookieStatus(cookieStatus){
+            const cookieStatusDiv = document.getElementById('cookie-status');
+            var cookieStatusString;
+            if (cookieStatus === "true") {
+                cookieStatusString = "Cookies are currently valid";
+                cookieStatusDiv.style.color = 'green';
+            }
+            else{
+                cookieStatusString = "Cookies are currently invalid";
+                cookieStatusDiv.style.color = 'red';
+            }
+            cookieStatusDiv.innerText = cookieStatusString;
+        }
+
+        function updateMoveLists(validMoves, playedMoves) {
+            const movesList = document.getElementById('movesList');
+            const playedMoveList = document.getElementById('playedMoves');
+            movesList.innerHTML = ''; 
+            playedMoveList.innerHTML = ''; 
+            validMoves.forEach(move => {
+                let li = document.createElement('li');
+                li.textContent = move;
+                movesList.appendChild(li);
+            });
+            playedMoves.forEach(move => {
+                let li = document.createElement('li');
+                li.textContent = move;
+                playedMoveList.appendChild(li);
+            });
+        }
+
+        function toggleListVisibility(event) {
+            const list = event.target.nextElementSibling;
+            if (list.style.display === "none" || list.style.display === "") {
+                list.style.display = "block";
+            } else {
+                list.style.display = "none";
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            getMoves();
+            getCookieStatus();
+            document.getElementById('toggleValidMoves').addEventListener('click', toggleListVisibility);
+            document.getElementById('togglePlayedMoves').addEventListener('click', toggleListVisibility);
+            document.getElementById('toggleReadme').addEventListener('click', toggleListVisibility);
+        });
+    </script>
+    <div id="cookie-status"></div>
+    <div id="chessboard-info">
+        <p>The chess board for this game is visible in my About section at <a href="https://www.linkedin.com/in/aidentenn/" target="_blank">linkedin.com/in/aidentenn</a>
+            <br>Note that the board will take several seconds to update.
+        </p>
+    </div>
+    <div>
+        <form id="chessForm" onsubmit="submitMove(event)" autocomplete="off">
+            <label for="moveInput">Type move here: </label>
+            <input type="text" id="moveInput" name="moveInput"> 
+            <input type="submit" value="Submit">
+        </form>
+        <div id="response"></div>
+        <div>
+            <h3 id="toggleValidMoves" class="collapsible">Current Valid Moves</h3>
+            <ul id="movesList" class="collapsible-content"></ul>
+            <h3 id="togglePlayedMoves" class="collapsible">Played Moves</h3>
+            <ul id="playedMoves" class="collapsible-content"></ul>
+        </div>
+    </div>
+    <div id="readme">
+        <h3 id="toggleReadme" class="collapsible">README.md</h3>
+        <div id="readmeContent" class="collapsible-content">
+            <h2>LinkedIn Chess</h2>
+            <h3>Front End</h3>
+            <p>The frontend for this is made with just HTML/CSS/JS and hosted on Vercel. I used its serverless functions to make HTTP requests to my
+                server running on an EC2 instance because browsers don't allow HTTP requests to be made between HTTPS and HTTP sites. However when the requests are made
+                from the serverless function environment, it doesn't have that issue. 
+            </p>
+            <h3>Back End</h3>
+            <p>The backend is an Express.js server hosted on an AWS EC2 instance. It's there where the moves are validated, and where the game state
+                is saved. I figured I didn't need to do anything fancy so the board state is just saved in a JSON file.
+                <br><br> The server has two endpoints: one for moves and one for getting the cookie status. The first endpoint supports GET or POST for getting
+                moves or for submitting a move. The second is only for GET requests and it simply returns the cookie status.
+            </p>
+            <h3>Issues</h3>
+            <p>Although the implementation for this wasn't really that hard, I ran into a lot of issues when it came time to actually host it.
+                It felt like there was just one thing after another over and over. The main issues I had were the Vercel issues with Playwright and
+                the mixed content errors between HTTPS and HTTP. And even after all that I still had an issue with the cookies expiring presumably because
+                I consistently log into my account on my laptop. As such I decided to setup a Python script to check the status of the cookies every 8 hours
+                and update them if necessary by logging back into the account. I did this instead of automatically logging in after each move is submitted
+                because I figured it would help avoid being flagged as a bot.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
